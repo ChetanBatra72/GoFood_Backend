@@ -1,7 +1,9 @@
     const mongoose = require("mongoose");
-    const mongoURI =
-    "mongodb://gofood:ChetanB@ac-robopfc-shard-00-00.elnluhv.mongodb.net:27017,ac-robopfc-shard-00-01.elnluhv.mongodb.net:27017,ac-robopfc-shard-00-02.elnluhv.mongodb.net:27017/gofoodmern?ssl=true&replicaSet=atlas-ov2kac-shard-0&authSource=admin&retryWrites=true&w=majority";
-
+    // const mongoURI =
+    // "mongodb://gofood:ChetanB@ac-robopfc-shard-00-00.elnluhv.mongodb.net:27017,ac-robopfc-shard-00-01.elnluhv.mongodb.net:27017,ac-robopfc-shard-00-02.elnluhv.mongodb.net:27017/gofoodmern?ssl=true&replicaSet=atlas-ov2kac-shard-0&authSource=admin&retryWrites=true&w=majority";
+//  const mongoURI = process.env.DataBase;
+const mongoURI = process.env.DataBase;
+// console.log(mongoURI);
     const mongoDB = async () => {
     try {
         // Connect to MongoDB

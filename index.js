@@ -1,18 +1,19 @@
-const cors = require('cors');
+const cors = require("cors");
 const express = require("express");
 const app = express();
-const port = 5000;
+require('dotenv').config();
+const port =  process.env.port|| 5000 ;
 const mongoDB = require("./db");
 
 //implemented a CORS for cross connection b/w frontend & backend
-app.use(cors({
-  origin: 'http://localhost:3000',  // Update with your frontend origin
-  credentials: true,
-}));
-//  app.use(cors({
-//     origin: '*',  // Update with your frontend origin
-//     // credentials: true,
-//   }));
+// app.use(cors({
+//   origin: 'http://localhost:3000',  // Update with your frontend origin
+//   credentials: true,
+// }));
+ app.use(cors({
+    origin: '*',  // Update with your frontend origin
+    // credentials: true,
+  }));
 
 // app.use((req, res,next)=>{
 //    res.setHeader("Access-Control-Allow-Origin" , "http://localhost:3000");
